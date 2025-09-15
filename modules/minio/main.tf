@@ -10,6 +10,7 @@ resource "helm_release" "minio" {
   values = [
     yamlencode({
       mode = "standalone" # or distributed
+      replicas = 1
 
       auth = {
         rootUser     = "minioadmin"
