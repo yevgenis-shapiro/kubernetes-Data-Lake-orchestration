@@ -1,7 +1,7 @@
 <img width="1287" height="577" alt="1_GXjmR0-ghYha9IEMdgpLyg" src="https://github.com/user-attachments/assets/1bd1cb2f-e766-49c3-812a-b781462bdd9d" />
 
 ###  Data Lake | Kubernetes ☸️
-Apache Airflow is an open-source workflow orchestration platform used to programmatically author, schedule, and monitor data pipelines or other workflows.
+Build an end-to-end data lake ELT (Extract, Load, Transform) pipeline using a modern tech stack. The setup includes MinIO, Apache Iceberg, Trino, dbt, PostgreSQL and Apache Airflow for orchestration. This stack uses open source tools and provide modularity, and ability to streamline data querying, making it suitable for modern data engineering workflows
 
 
 #### 🧱 Architecture Overview :
