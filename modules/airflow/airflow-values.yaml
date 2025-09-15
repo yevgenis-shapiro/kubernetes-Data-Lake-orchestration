@@ -1,0 +1,14 @@
+
+executor: "CeleryExecutor"
+
+dags:
+  persistence:
+    enabled: true
+    size: 1Gi
+
+workers:
+  replicas: 2
+
+web:
+  service:
+    type: ClusterIP
