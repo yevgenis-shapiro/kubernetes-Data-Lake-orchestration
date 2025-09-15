@@ -23,9 +23,18 @@ module "nginx" {
   depends_on = [module.metallb]
 }
 
-module "airflow" {
-  source = "./modules/airflow"
+module "minio" {
+  source = "./modules/minio"
   depends_on = [module.nginx]
 }
 
+module "airflow" {
+  source = "./modules/airflow"
+  depends_on = [module.minio]
+}
+
+module "postgresql" {
+  source = "./modules/postgresql"
+  depends_on = [module.minio]
+}
 
