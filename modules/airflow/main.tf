@@ -9,7 +9,6 @@ resource "helm_release" "airflow" {
 
   atomic           = true
   cleanup_on_fail  = true
-  wait             = true
 
   values = [
     file("${path.module}/airflow-values.yaml")
