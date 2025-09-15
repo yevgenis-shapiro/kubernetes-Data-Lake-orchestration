@@ -1,14 +1,42 @@
-
 executor: "CeleryExecutor"
 
 dags:
   persistence:
     enabled: true
     size: 1Gi
+  gitSync:
+    enabled: true
+    repo: "https://github.com/my-org/airflow-dags.git"
+    branch: main
 
 workers:
   replicas: 2
+  resources:
+    requests:
+      cpu: "500m"
+      memory: "1Gi"
+    limits:
+      cpu: "1"
+      memory: "1Gi"
 
 web:
   service:
     type: ClusterIP
+
+logs:
+  persistence:
+    enabled: true
+    size: 10Gi
+    storageClassName: standard
+
+postgresql:
+  enabled: true
+  auth:
+    username: airflow
+    password: airflow
+    database: airflow
+
+redis:
+  enabled: true
+  auth:
+    enabled: false
