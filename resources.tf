@@ -28,13 +28,12 @@ module "minio" {
   depends_on = [module.nginx]
 }
 
-module "airflow" {
-  source = "./modules/airflow"
-  depends_on = [module.minio]
-}
-
 module "postgresql" {
   source = "./modules/postgresql"
   depends_on = [module.minio]
 }
 
+module "airflow" {
+  source = "./modules/airflow"
+  depends_on = [module.postgresql]
+}
