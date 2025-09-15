@@ -14,13 +14,13 @@ Build an end-to-end data lake ELT (Extract, Load, Transform) pipeline using a mo
 
 
 
-🎯 Typical Use Cases
+🎯 Pipeline Workflow
 ```
-ETL (Extract, Transform, Load) pipelines
-Data warehouse updates (e.g., nightly batch jobs)
-Machine learning model training and deployment workflows
-Automating business reports
-Coordinating complex cloud operations
+1. Data Storage (MinIO)
+2. Table Format & Schema Evolution (Iceberg) warehouse updates (e.g., nightly batch jobs)
+3. Distributed SQL engine (Trino)chine learning model training and deployment workflows
+4. Iceberg Catalog (Postgres + S3)
+5. Orchestrating the Workflow with Apache Airflow
 ```
 
 🚀 
