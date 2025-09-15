@@ -18,17 +18,12 @@ workers:
       memory: "1Gi"
     limits:
       cpu: "1"
-      memory: "1Gi"
+      memory: "2Gi"
 
 web:
   service:
     type: ClusterIP
 
-logs:
-  persistence:
-    enabled: true
-    size: 10Gi
-    storageClassName: "standard"
 
 postgresql:
   enabled: true
@@ -36,4 +31,3 @@ postgresql:
     username: airflow
     password: airflow
     database: airflow
-
