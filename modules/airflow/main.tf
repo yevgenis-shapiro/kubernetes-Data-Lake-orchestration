@@ -7,6 +7,10 @@ resource "helm_release" "airflow" {
   version    = "1.15.0" # pick a stable chart version
   create_namespace = true
 
+  atomic           = true
+  cleanup_on_fail  = true
+  wait             = true
+
   values = [
     file("${path.module}/airflow-values.yaml")
   ]
