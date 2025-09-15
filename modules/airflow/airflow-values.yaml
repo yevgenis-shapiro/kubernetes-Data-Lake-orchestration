@@ -1,3 +1,4 @@
+
 executor: "CeleryExecutor"
 
 dags:
@@ -27,7 +28,7 @@ logs:
   persistence:
     enabled: true
     size: 10Gi
-    storageClassName: standard
+    storageClassName: "standard"
 
 postgresql:
   enabled: true
@@ -36,7 +37,3 @@ postgresql:
     password: airflow
     database: airflow
 
-redis:
-  enabled: true
-  auth:
-    enabled: false
